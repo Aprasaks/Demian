@@ -1,0 +1,60 @@
+@import "prismjs/themes/prism-tomorrow.css";
+@import url("https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "116watermelon";
+  src: url("https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/116watermelon.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.quote-block {
+  font-family: "116watermelon", sans-serif;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.05em;
+  color: #ffffffcc;
+  animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+body {
+  @apply bg-black text-white font-sans;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.prose {
+  @apply font-sans; /* 추가! */
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* 추가! */
+  max-width: 70ch;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+/* 다크모드용 */
+.prose-invert {
+  color: #d1d5db;
+}
+
+/* 목차 이동 */
+html {
+  scroll-behavior: smooth;
+}
