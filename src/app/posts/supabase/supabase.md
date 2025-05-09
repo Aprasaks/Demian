@@ -1,6 +1,6 @@
 ---
-title: "Supabase란?"
-slug: "supabase-intro"
+title: "supabase"
+slug: "supabase"
 date: "2025-05-09"
 ---
 
