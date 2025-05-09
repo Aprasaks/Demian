@@ -9,6 +9,7 @@ const groupColors: Record<string, string> = {
   javascript: "#ffffff",
   react: "#d0b0ff",
   node: "#b0ffd6",
+  supabse: "#d33f2d",
 };
 
 interface Node {
@@ -24,12 +25,12 @@ interface Link {
   target: string;
 }
 
-export const dynamic = "force-dynamic"; // ✅ 매번 최신 파일 반영
+export const dynamic = "force-dynamic"; //  매번 최신 파일 반영
 
 export default async function GraphViewPage() {
   const postsBaseDir = path.join(process.cwd(), "src/app/posts");
 
-  // ✅ 1. categories 가져오기
+  //  categories 가져오기
   const categories = fs.readdirSync(postsBaseDir).filter((dir) => {
     const fullPath = path.join(postsBaseDir, dir);
     return fs.statSync(fullPath).isDirectory();
@@ -38,10 +39,10 @@ export default async function GraphViewPage() {
   const nodes: Node[] = [];
   const links: Link[] = [];
 
-  // ✅ 파일 별 content 저장용
+  //  파일 별 content 저장용
   const fileMap: Record<string, { content: string; title: string }> = {};
 
-  // ✅ 2. 먼저 모든 nodes 생성
+  // . 먼저 모든 nodes 생성
   categories.forEach((category) => {
     const postsDir = path.join(postsBaseDir, category);
     const files = fs.readdirSync(postsDir).filter((file) => file.endsWith(".md"));

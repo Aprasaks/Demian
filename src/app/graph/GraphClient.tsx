@@ -9,6 +9,7 @@ const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
   ssr: false,
 });
 
+
 type GraphNode = {
   id: string;
   label: string;
@@ -52,6 +53,10 @@ export default function GraphClient({
       onNodeClick={(node) => {
         const g = node as GraphNode;
         router.push(`/posts/${g.group}/${g.id}`); // ✅ id가 곧 slug니까!
+      }}
+      onNodeDragEnd={(node) => {
+        node.fx = undefined;
+        node.fy = undefined;
       }}
       width={dimensions.width}
       height={dimensions.height}
