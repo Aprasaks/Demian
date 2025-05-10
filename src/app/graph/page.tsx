@@ -9,7 +9,7 @@ const groupColors: Record<string, string> = {
   javascript: "#ffffff",
   react: "#d0b0ff",
   node: "#b0ffd6",
-  supabse: "#d33f2d",
+  supabase: "#d33f2d",
 };
 
 interface Node {
